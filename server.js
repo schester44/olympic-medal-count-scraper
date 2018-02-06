@@ -9,7 +9,7 @@ const olympics = new Olympics({ cache, scraper })
 const port = parseInt(process.env.PORT, 10) || 3000
 
 server.get(["/data", "/data/:year"], async (req, res) => {
-    const { year = 2014 } = req.params
+    const { year = 2018 } = req.params
     const data = await olympics.getMedalCounts({ year })
     
 	console.log(`Data fetched for ${year}`);
