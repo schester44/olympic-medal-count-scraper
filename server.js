@@ -10,7 +10,7 @@ const port = parseInt(process.env.PORT, 10) || 3000
 
 server.get(["/data", "/data/:year"], async (req, res) => {
     const { year } = req.params
-    const data = await olympics.getMedalCounts({ year: year ? year : 2014 })
+    const data = await olympics.getMedalCounts({ year: year ? year : 2018 })
 
     res.json({ data })
 })
